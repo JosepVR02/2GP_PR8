@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 12.5% 25% 37.5% 25%;
+            row-gap: 0.5em;
+            column-gap: 0.5em;
+
+        }
+        nav{
+            grid-column: 1 / 7;
+            background-color: #FF1717;
+        }
+        header{
+            grid-column: 1 / 7;
+            background-color: #1CD6FF;
+        }
+        main{
+            grid-column: 1 / 6;
+            background-color: #FF9153;
+        }
+        aside{
+            grid-column: 6 / 7;
+            background-color: #1EFF1A;
+        }
+        footer{
+            grid-column: 1 / 7;
+            background-color: #EDFF1C;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            font-family: 'Rokkitt', serif;
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: 834px){
+            .container{
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 11.11% 33.3% 44.4% 11.11% ; 
+            }
+            main{
+                background-color: #00EEE0;
+            }
+            header{
+                background-color: #FF1C1C;
+            }
+            nav{
+                background-color: #0259DB;
+            }
+            aside{
+                background-color: #7E1AFF;
+            }
+            footer{
+                background-color: #FF1CA4;
+            }
+        }
+
+        @media screen and (max-width: 414px){
+            .container{
+            grid-template-columns: auto auto ;
+            grid-template-rows: 12.5% 25% 37.5% 12.5% 12.5%; 
+            }
+            main{
+                background-color: #FFA653;
+            }
+            header{
+                background-color: #DFFF1C;
+            }
+            nav{
+                background-color: #61FF17;
+            }
+            aside{
+                background-color: #FF5E1A;
+            }
+            footer{
+                background-color: #1CFF92;
+            }
+        }
+
+    </style>
+</head>
+        <body>
+            <div class="container">
+            <nav>
+                <h1>Nav</h1>
+            </nav>
+                <header>
+                    <h1>Header</h1>
+                 </header>
+            <main>
+                <h1>Main</h1>
+            </main>
+            <aside>
+                <h1>Aside</h1>
+            </aside>
+            <footer>
+                <h1>Footer</h1>
+            </footer>
+        </div>
+        </body>
+</html>
